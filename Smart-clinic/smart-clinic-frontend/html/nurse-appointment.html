@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Clinic - Nurse Appointment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/mobile-first.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>SMART CLINIC</h1>
+            <p>Smart Healthcare for everyone</p>
+        </div>
+
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="my_appointments.html">My Appointments</a>
+        <a href="queue.html">Queue Status</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="consultation-section">
+
+            <h2>Book a Nurse Appointment / Fill in the form below</h2>
+
+            <!-- Consultation Image -->
+            <img src="../smart-clinic-visuals/clinic nurses consultation room.png" 
+                alt="Nurse Consultation" 
+                class="consultation-image">
+
+            <!-- Welcome - Patient Name  -->
+            <p class="welcome" id="patient-name"></p>
+
+            <!-- Nurse Selection -->
+            <label>Select Nurse</label>
+            <select id="nurse-select" name="nurse" required>
+                <option value="">Choose a nurse</option>
+                <option value="6">Nurse Rebecca Jones</option>
+                <option value="7">Nurse Samuel Clark</option>
+                <option value="8">Nurse Natalie Brooks</option>
+            </select>
+
+            <!-- Health Issue Selection -->
+            <label>Health Issue</label>
+            <select id="health-issue" name="health_issue" required>
+                <option value="">Select an issue</option>
+                <option>Blood Pressure Check</option>
+                <option>Wound Dressing</option>
+                <option>Vaccination</option>
+                <option>General Nursing Care</option>
+            </select>
+
+            <!-- Additional Reason -->
+            <label>Reason for Visit (optional)</label>
+            <textarea id="reason" name="reason" placeholder="Write your reason here..."></textarea>
+
+            <!-- Date Selection -->
+            <label>Select Date</label>
+            <input type="date" id="appointment-date" name="date" required>
+
+            <!-- Time Slots -->
+            <label>Available Time Slots</label>
+            <div class="time-slots" id="time-slots">
+                <!-- JS will generate buttons here -->
+            </div>
+
+            <!-- Confirm Button -->
+            <button class="confirm-btn" id="confirm-btn">Confirm Appointment</button>
+        </section>
+    </main>
+
+    <!-- External JS -->
+    <script src="../js/nurse-appointment.js"></script>
+    <script src="../js/appointment-slots.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: Smart_clinic@gmail.com</p>
+        <p>Opening Hours: Monday - Friday, 9:00 am - 6:00 pm</p>
+        <p>© 2026 Smart Clinic - Academic Project Prototype</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clinic - My Appointments</title>
+
+    <!-- Session Check -->
+    <script>
+        const patient = sessionStorage.getItem("patient");
+        if (!patient) {
+            window.location.href = "login.html?ts=" + Date.now();
+        }
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/mobile-first.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>SMART CLINIC</h1>
+            <p>Smart Healthcare for everyone</p>
+        </div>
+
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="my_appointments.html" class="active">My Appointments</a>
+        <a href="queue.html">Queue Status</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="consultation-section">
+            <h2>My Appointments</h2>
+            <p class="welcome-text">Below are your upcoming and past appointments.</p>
+
+            <!-- Appointment List -->
+            <div id="appointments-container" class="appointments-list">
+                <p>Loading your appointments...</p>
+            </div>
+        </section>
+    </main>
+
+   <script src="../js/my-appointment.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: Smart_clinic@gmail.com</p>
+        <p>Opening Hours: Monday - Friday, 9:00 am - 6:00 pm</p>
+        <p>© 2026 Smart Clinic - Academic Project Prototype</p>
+    </footer>
+
+</body>
+</html>

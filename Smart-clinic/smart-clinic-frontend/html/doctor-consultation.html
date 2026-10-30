@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Clinic - Doctor Consultation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/mobile-first.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>SMART CLINIC</h1>
+            <p>Smart Healthcare for everyone</p>
+        </div>
+
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="my_appointments.html">My Appointments</a>
+        <a href="queue.html">Queue Status</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="consultation-section">
+
+            <h2>Book a Doctor Consultation / Fill in the form below</h2>
+
+            <!-- Consultation Image -->
+            <img src="../smart-clinic-visuals/clinic doctor consultation.png" 
+                alt="Doctor Consultation" 
+                class="consultation-image">
+
+            <!-- Welcome - Patient Name  -->
+            <p class="welcome" id="patient-name"></p>
+
+            <!-- Doctor Selection -->
+<label for="doctor-select">Select Doctor</label>
+<select id="doctor-select" name="doctor" required>
+    <option value="">Choose a doctor</option>
+    <option value="1">Dr. Sarah Ahmed</option>
+    <option value="2">Dr. John Smith</option>
+    <option value="3">Dr. Aisha Khan</option>
+    <option value="4">Dr. Michael Brown</option>
+    <option value="5">Dr. Emily Taylor</option>
+</select>
+
+<!-- Health Issue Selection -->
+<label for="health-issue">Health Issue</label>
+<select id="health-issue" name="health_issue" required>
+    <option value="">Select an issue</option>
+    <option>Fever / Flu</option>
+    <option>Headache / Migraine</option>
+    <option>Stomach Pain</option>
+    <option>Back Pain</option>
+    <option>Skin Rash</option>
+    <option>General Check-up</option>
+</select>
+
+<!-- Additional Reason -->
+<label>Reason for Visit (optional)</label>
+<textarea id="reason" name="reason" placeholder="Write your reason here..."></textarea>
+
+<!-- Date Selection -->
+<label for="appointment-date">Select Date</label>
+<input type="date" id="appointment-date" name="date" required>
+
+<!-- Time Slots -->
+<label>Available Time Slots</label>
+<div class="time-slots" id="time-slots">
+    <!-- JS will generate buttons here -->
+</div>
+
+<!-- Confirm Button -->
+<button class="confirm-btn" id="confirm-btn">Confirm Appointment</button>
+</section>
+</main>
+
+    <!-- External JS -->
+    <script src="../js/dr-consultation.js"></script>
+    <script src="../js/appointment-slots.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: Smart_clinic@gmail.com</p>
+        <p>Opening Hours: Monday - Friday, 9:00 am - 6:00 pm</p>
+        <p>© 2026 Smart Clinic - Academic Project Prototype</p>
+    </footer>
+
+</body>
+</html>

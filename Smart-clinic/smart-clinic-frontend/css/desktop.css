@@ -1,0 +1,130 @@
+/* DESKTOP STYLING */
+
+header {
+    padding: 20px 40px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    background: #1F6F4A;
+}
+
+.nav-links a {
+    margin: 0 20px;
+}
+
+.consultation-section {
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.slot {
+    width: 150px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.time-slots {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.login-section input[type="email"],
+.login-section input[type="password"] {
+    width: 100%;            /* Full width inside the form */
+}
+
+/* Desktop version of Login button */
+.login-section button[type="submit"] {
+    width: 40%;             /* Smaller button on desktop */
+    margin: 20px auto;      /* Centers the button */
+    font-size: 18px;        /* Slightly larger text */
+}
+
+
+/* Make the Register button smaller on desktop screens */
+.register-btn {
+    width: 40%;                 /* Smaller width for desktop */
+    margin: 10px auto;          /* Center the button */
+    display: block;             /* Allows margin auto to work */
+    font-size: 18px;            /* Slightly larger text */
+}
+
+/* Make the text under the button slightly bigger on desktop */
+.register-text {
+    font-size: 16px;
+}
+
+
+/* Desktop layout for registration form */
+.registration-section {
+    max-width: 500px;          /* slightly wider on desktop */
+}
+
+/* Desktop submit button */
+.register-submit-btn {
+    width: 40%;                /* smaller button on desktop */
+    margin: 20px auto;         /* center the button */
+    display: block;            /* required for centering */
+}
+
+/* ==================================================
+   DESKTOP IMAGE OVERRIDES
+
+   Larger images for tablets and desktop screens.
+   The image remains small enough to keep the form
+   visible without excessive scrolling.
+================================================== */
+
+/* Desktop-only image sizing */
+.consultation-image {
+    width: 300px;
+    height: 180px;
+}
+
+/* ==================================================
+   Clinical Services
+   Desktop Layout
+================================================== */
+
+.service-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.service-card {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* ==================================================
+   APPOINTMENT ACTION BUTTONS (DESKTOP)
+   --------------------------------------------------
+   Overrides mobile styles for larger screens.
+================================================== */
+
+.cancel-btn {
+
+    /* Let button size itself naturally */
+    width: auto;
+
+    /* Prevent button becoming too small */
+    min-width: 180px;
+
+    /* Centre the button within the card */
+    display: block;
+
+    /* Add spacing above button */
+    margin-top: 12px;
+}
+
+
+
+
+

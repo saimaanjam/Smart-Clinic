@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        window.onunload = function() {};
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Smart Clinic - Patient Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/mobile-first.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>SMART CLINIC</h1>
+            <p>Smart Healthcare for everyone</p>
+        </div>
+
+        <!-- Mobile Hamburger Menu -->
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a >Home</a>
+        <a >My Appointments</a>
+        <a >Queue Status</a>
+        <a >Contact Us</a>
+        <a >About</a>
+        <a >Logout</a>
+    </nav>
+
+    <!-- Clinic reception Image 
+            <img src="../smart-clinic-visuals/clinic reception.png" 
+                alt="Clinic Reception" 
+                class="clinic-image">   -->
+
+
+    <!-- Login Form -->
+    <main>
+        <section class="login-section">
+            <h2>Patient Login</h2>
+            
+     <!-- Dummy fields to absorb browser autofill -->
+    <input type="text" style="display:none">
+    <input type="password" style="display:none">
+
+ 
+            <!-- Updated Form -->
+
+            <form id="loginForm" autocomplete="off" onsubmit="loginPatient(event)">
+            
+                
+                <label>Email Address</label>
+                <input type="email" id="email" autocomplete="off" required>
+
+                <label>Password</label>
+                <input type="password" id="password" autocomplete="off" required>
+
+                <script>
+                document.getElementById("email").value = "";
+                document.getElementById("password").value = "";
+                </script>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Register Button -->
+        <button type="button" class="register-btn" onclick="window.location.href='registration.html'">
+         Register
+        </button>
+
+        <p class="register-text">New to Smart_Clinic? Register here</p>
+
+        
+    </main>
+
+        <!-- Footer -->
+    <footer>
+        <p>Email: Smart_clinic@gmail.com</p>
+        <p>Opening Hours: Monday - Friday, 9:00 am - 6:00 pm</p>
+        <p>© 2026 Smart Clinic - Academic Project Prototype</p>
+    </footer>
+
+    <!-- JavaScript -->
+     
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

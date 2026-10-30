@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Clinic - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- to stop opening index page without logging in -->
+    <script>
+    const patient = sessionStorage.getItem("patient");
+        if (!patient) {
+        window.location.href = "login.html";
+        }
+    </script>
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/mobile-first.css">
+    <link rel="stylesheet" href="../css/desktop.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>SMART CLINIC</h1>
+            <p>Smart Healthcare for everyone</p>
+        </div>
+
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="my_appointments.html">My Appointments</a>
+        <a href="queue.html">Queue Status</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="consultation-section">
+
+            <h2>Welcome to Smart Clinic</h2>
+            <p class="welcome-text" id="patient-name"></p>
+
+            <p class="welcome-text">
+                Book appointments, manage your bookings and check your queue status in one convenient place.
+            </p>
+
+            <!-- Home Page Image -->
+            <img src="../smart-clinic-visuals/clinic consultation room.png" 
+                 alt="Clinic Consultation Room" 
+                 class="consultation-image">
+
+            <!-- Services Section -->
+<h3>Our Clinical Services</h3>
+
+<div class="service-buttons">
+
+    <div class="service-card">
+        <a class="btn" href="doctor-consultation.html">
+            Doctor Consultation
+        </a>
+        <p>
+            Book an appointment with a doctor for diagnosis,
+            treatment, and general health concerns.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <a class="btn" href="nurse-appointment.html">
+            Nursing Appointment
+        </a>
+        <p>
+            Access routine health checks, vaccinations,
+            wound care, and nursing support.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <a class="btn" href="midwife-appointment.html">
+            Midwife Appointment
+        </a>
+        <p>
+            Receive pregnancy, maternity, and postnatal
+            care from experienced midwives.
+        </p>
+    </div>
+
+</div>
+
+            
+        </section>
+    </main>
+
+<script>
+    const patient = JSON.parse(sessionStorage.getItem("patient"));
+    if (patient) {
+        document.getElementById("patient-name").textContent =
+            `Welcome, ${patient.first_name} ${patient.last_name}`;
+    }
+</script>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: Smart_clinic@gmail.com</p>
+        <p>Opening Hours: Monday - Friday, 9:00 am - 6:00 pm</p>
+        <p>© 2026 Smart Clinic - Academic Project Prototype</p>
+    </footer>
+
+</body>
+</html>
